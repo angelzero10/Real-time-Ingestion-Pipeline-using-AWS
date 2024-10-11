@@ -36,5 +36,9 @@ terraform.rc
 
 .gitattributes
 
-# Include venv files for the Diagram as Code
-2_architecture/venv
+# Include venv python files
+**/venv/*
+**/__pycache__/*
+
+# include .gitattributes
+.gitattributes

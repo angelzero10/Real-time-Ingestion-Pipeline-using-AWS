@@ -1,0 +1,27 @@
+from diagrams import Diagram
+from diagrams.aws.analytics import KinesisDataStreams
+from diagrams.aws.compute import Lambda
+from diagrams.aws.database import Dynamodb
+from diagrams.aws.storage import S3
+from diagrams.aws.management import Cloudwatch
+
+with Diagram("Real-time Ingestion Pipeline", show=False, direction="LR"):
+    # Data ingestion stream
+    kinesis_stream = KinesisDataStreams("Kinesis Stream")
+
+    # Lambda for processing data
+    data_processing_lambda = Lambda("Data Processing Lambda")
+
+    # DynamoDB for aggregation
+    dynamo_db = Dynamodb("DynamoDB (Aggregation)")
+
+    # S3 for data persistence
+    s3_storage = S3("S3 (Storage)")
+
+    # CloudWatch for monitoring
+    cloud_watch = Cloudwatch("CloudWatch")
+
+    # Diagram connections
+    kinesis_stream >> data_processing_lambda
+    data_processing_lambda >> [dynamo_db, s3_storage]
+    data_processing_lambda >> cloud_watch
