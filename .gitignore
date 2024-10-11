@@ -35,3 +35,6 @@ terraform.rc
 
 
 .gitattributes
+
+# Include venv files for the Diagram as Code
+2_architecture/venv
