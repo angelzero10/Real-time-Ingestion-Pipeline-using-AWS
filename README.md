@@ -72,8 +72,8 @@ Setup and Deployment
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/angelzero10/luis.ayala.git
+cd luis.ayala
 ```
 
 ### 2. Set Up Python Virtual Environment
