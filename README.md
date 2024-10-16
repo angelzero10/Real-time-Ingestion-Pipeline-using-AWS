@@ -43,9 +43,11 @@ project_root/
 │   ├── variables.tf
 │   ├── outputs.tf
 │   └── lambda_function.zip
-├── diagrams/
-│   ├── architecture_diagram.py
-│   └── architecture_diagram.png
+├── architecture/
+│   ├── (to be)resilient_real-time_ingestion_pipeline.py
+│   ├── (to be)resilient_real-time_ingestion_pipeline.png
+│   ├── (as is)real-time_ingestion_pipeline.py
+│   └── (as is)real-time_ingestion_pipeline.png
 ├── scripts/
 │   ├── build.sh
 │   ├── unit_test.sh
@@ -55,6 +57,10 @@ project_root/
 ├── README.txt
 └── .gitignore
 ```
+
+In the `architecture/` folder, there are diagrams for the infrastructure of the project. Due to time limitations, the `(as is)real-time_ingestion_pipeline.py` (infrastructure as code) and `(as is)real-time_ingestion_pipeline.png` image correspond to the current state of the project.
+
+The `(to be)resilient_real-time_ingestion_pipeline.py` (infrastructure as code) and `(to be)resilient_real-time_ingestion_pipeline.png` are proposals to improve the robustness of the project.
 
 Prerequisites
 -------------
